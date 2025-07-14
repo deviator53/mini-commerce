@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "name": "Mini Wireless Earbuds",
+    "slug": "mini-wireless-earbuds",
+    "image": "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/16/1898953/1.jpg?6298",
+    "price": 29.99,
+    "description": "Compact, high-quality wireless earbuds with noise cancellation and long battery life."
+  },
+  {
+    "id": 2,
+    "name": "Smart Fitness Tracker",
+    "slug": "smart-fitness-tracker",
+    "image": "https://m.media-amazon.com/images/I/31HitOMg8SL._SY1000_.jpg",
+    "price": 39.99,
+    "description": "Track your steps, heart rate, and sleep with this stylish fitness tracker."
+  },
+  {
+    "id": 3,
+    "name": "Portable Bluetooth Speaker",
+    "slug": "portable-bluetooth-speaker",
+    "image": "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/46/4662104/1.jpg?6224",
+    "price": 24.99,
+    "description": "Loud, clear sound in a small package. Water-resistant and perfect for travel."
+  },
+  {
+    "id": 4,
+    "name": "USB-C Charging Cable",
+    "slug": "usb-c-charging-cable",
+    "image": "https://ng.jumia.is/unsafe/fit-in/680x680/filters:fill(white)/product/99/4299822/1.jpg?5869",
+    "price": 9.99,
+    "description": "Durable, fast-charging USB-C cable. 1 meter length."
+  },
+  {
+    "id": 5,
+    "name": "Mini Desk Fan",
+    "slug": "mini-desk-fan",
+    "image": "https://www-konga-com-res.cloudinary.com/f_auto,fl_lossy,dpr_3.0,q_auto/media/catalog/product/E/U/182490_1709741367.jpg",
+    "price": 14.99,
+    "description": "Stay cool with this quiet, USB-powered mini desk fan."
+  },
+  {
+    "id": 6,
+    "name": "LED Night Light",
+    "slug": "led-night-light",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9yZpbtRjrfqXjisLYTP4UWWioZkUt9wN_2ywG65pXbYnzFWx6MLtOHqfmYLPNM4awo_k&usqp=CAU",
+    "price": 7.99,
+    "description": "Soft, energy-efficient LED night light with touch control."
+  },
+  {
+    "id": 7,
+    "name": "Eco Water Bottle",
+    "slug": "eco-water-bottle",
+    "image": "https://m.media-amazon.com/images/I/71gDNOO1AFL._UF1000,1000_QL80_.jpg",
+    "price": 12.99,
+    "description": "Reusable, BPA-free water bottle. Keeps drinks cold for hours."
+  },
+  {
+    "id": 8,
+    "name": "Magnetic Phone Holder",
+    "slug": "magnetic-phone-holder",
+    "image": "https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/80/5901653/1.jpg?9897",
+    "price": 11.99,
+    "description": "Secure, adjustable magnetic phone holder for your car or desk."
+  }
+]
