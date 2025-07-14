@@ -1,7 +1,7 @@
-"use client";
+import { Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 
-export default function SuccessPage() {
+function SuccessPage() {
   const params = useSearchParams();
   const orderId = params.get("orderId");
 
@@ -20,5 +20,13 @@ export default function SuccessPage() {
         </a>
       </p>
     </div>
+  );
+}
+
+export default function SuccessPageWrapper() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <SuccessPage />
+    </Suspense>
   );
 }

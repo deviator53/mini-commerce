@@ -31,7 +31,7 @@ export default function CataloguePage() {
 
   return (
     <>
-      <section className="mb-10 text-center py-10 bg-gradient-to-br from-blue-50 to-white rounded-xl shadow">
+      <section className="mb-10 text-center py-10 bg-gradient-to-br from-blue-100 to-white rounded-xl shadow">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-4 text-blue-700">
             Welcome to Mini-Commerce
@@ -55,7 +55,7 @@ export default function CataloguePage() {
       )}
       <div
         ref={gridRef}
-        className="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-6"
+        className="max-w-4xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6"
       >
         {products.map((product) => (
           <div
@@ -92,7 +92,7 @@ export default function CataloguePage() {
               </button>
               <Link
                 href={`/product/${product.slug}`}
-                className="flex-1 px-3 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300 text-center"
+                className="flex-1 px-3 py-2 border border-gray-200 rounded hover:bg-gray-200 text-gray-800 text-center"
               >
                 View
               </Link>

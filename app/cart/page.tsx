@@ -10,7 +10,7 @@ export default function CartPage() {
     <div>
       <h1 className="max-w-4xl mx-auto text-2xl font-bold mb-4">Your Cart</h1>
       {items.length === 0 ? (
-        <div>Your cart is empty.</div>
+        <div className="text-center">Your cart is empty.</div>
       ) : (
         <div className="max-w-4xl mx-auto shadow-lg p-2 space-y-4">
           {items.map((item) => (
