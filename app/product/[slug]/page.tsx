@@ -124,7 +124,7 @@ export default function ProductDetailPage() {
         </div>
        
         <button
-          className="w-full py-3 bg-black text-white rounded text-lg font-semibold hover:bg-gray-900 mb-2"
+          className="w-full py-3 bg-blue-600 text-white rounded text-lg font-semibold hover:bg-blue-700 mb-2"
           onClick={() => {
             addToCart(product, 1);
             router.push("/cart");

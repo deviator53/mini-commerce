@@ -52,22 +52,22 @@ export default function RootLayout({
               </div>
               <div className="flex gap-4 items-center">
                 <span className="hidden sm:inline">|</span>
-                <a
+                <Link
                   href="https://david-bradford.vercel.app/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:underline"
                 >
                   About
-                </a>
-                <a
+                </Link>
+                <Link
                   href="https://github.com/deviator53"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:underline"
                 >
                   GitHub
-                </a>
+                </Link>
               </div>
             </div>
           </footer>

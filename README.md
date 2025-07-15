@@ -1,36 +1,36 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Mini-Commerce
 
-## Getting Started
+## Project Overview
 
-First, run the development server:
+Mini-Commerce is a tiny, modern e-commerce prototype built with Next.js (App Router), React Query, and Zustand. It allows users to browse a catalogue of products, view product details, manage a persistent cart, and complete a mock checkout flow. All state (cart, currency, products) persists across reloads using localStorage. 
+## Design Approach
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Layout:** Clean, centered layouts with a prominent hero section, product grid, and modern product detail pages inspired by real e-commerce UIs.
+- **Color:** Uses a blue/white palette for trust and clarity
+- **Responsiveness:** All pages are mobile-friendly using Tailwind CSS utility classes. Grids and flex layouts adapt to screen size.
+- **Navigation:** Sticky header with navigation, cart badge, and currency selector for easy access.
+- **404 Handling:** Custom not-found page for unknown routes.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Tools & Techniques
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Framework:** Next.js (App Router, TypeScript)
+- **State Management:** Zustand (cart, currency)
+- **Data Fetching:** React Query (products from localStorage)
+- **Styling:** Tailwind CSS
+- **Testing:** Manual testing (no automated tests in this prototype)
+- **Patterns:** Hooks for formatting, modular components, separation of concerns, and localStorage persistence.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## SEO Strategy
 
-## Learn More
+- **Meta Tags:** Uses Next.js metadata for title and description.
+- **Performance:** Optimized images (local or CDN), minimal JS bundle, and fast client-side navigation.
+- **Accessibility:** Semantic HTML, alt text for images, focus states, and ARIA labels where appropriate.
 
-To learn more about Next.js, take a look at the following resources:
+## Error-Handling Technique
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **404s:** Custom `not-found.tsx` page for unknown routes.
+- **Data Fetching:** Handles missing products gracefully with fallback UI.
+- **Cart/Checkout:** Prevents actions on empty cart, disables invalid actions.
+- **Image Loading:** Uses alt text and fallback messaging for missing images.
+- **Logging:** No external logging; errors are surfaced to the user via UI messages.
+- **Recovery:** Users are guided back to the homepage or can retry actions.
