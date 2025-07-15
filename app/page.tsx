@@ -55,12 +55,12 @@ export default function CataloguePage() {
             Discover the best mini gadgets and everyday essentials at unbeatable
             prices. Shop smart, shop mini!
           </p>
-          <button
-            className="px-8 py-3 bg-blue-600 text-white rounded-full text-lg font-semibold shadow hover:bg-blue-700 transition"
-            onClick={handleShopNow}
-          >
-            Shop Now
-          </button>
+            <button
+              onClick={() => window.location.reload()}
+              className="inline-block px-8 py-3 bg-blue-600 text-white rounded-full text-lg font-semibold shadow hover:bg-blue-700 transition"
+            >
+              Shop Now
+            </button>
         </div>
       </section>
       {added && (
