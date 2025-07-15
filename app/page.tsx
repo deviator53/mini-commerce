@@ -8,7 +8,9 @@ import { useFormatCurrency } from "./utils/formatCurrency";
 import Image from "next/image";
 
 export default function CataloguePage() {
+  const [mounted, setMounted] = useState(false);
   useEffect(() => {
+    setMounted(true);
     seedProducts();
   }, []);
 
@@ -31,6 +33,16 @@ export default function CataloguePage() {
     const item = cartItems.find((i) => i.slug === slug);
     return item ? item.quantity : 0;
   };
+
+  if (!mounted)
+    return (
+      <div className="flex items-center justify-center min-h-[60vh]">
+        <span
+          className="inline-block w-12 h-12 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"
+          aria-label="Loading"
+        ></span>
+      </div>
+    );
 
   return (
     <>
