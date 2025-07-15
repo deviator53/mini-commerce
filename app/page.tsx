@@ -70,7 +70,7 @@ export default function CataloguePage() {
       )}
       <div
         ref={gridRef}
-        className="max-w-4xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6"
+        className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
       >
         {products.map((product) => (
           <div
