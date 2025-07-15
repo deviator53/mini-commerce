@@ -2,7 +2,16 @@
 
 ## Project Overview
 
-Mini-Commerce is a tiny, modern e-commerce prototype built with Next.js (App Router), React Query, and Zustand. It allows users to browse a catalogue of products, view product details, manage a persistent cart, and complete a mock checkout flow. All state (cart, currency, products) persists across reloads using localStorage. 
+Mini-Commerce is a tiny, modern e-commerce prototype built with Next.js (App Router), React Query, and Zustand. It allows users to browse a catalogue of products, view product details, manage a persistent cart, and complete a mock checkout flow. All state (cart, currency, products) persists across reloads using localStorage.
+
+## Features
+
+- **Home Page (Catalogue):** Displays a grid of products for browsing. On first visit, products are seeded into localStorage, so there may be a brief delay before products appear (especially in production) due to client-side persistence.
+- **Currency Dropdown:** Instantly view product prices in USD, NGN, or EUR using the currency selector in the header. Prices update everywhere in the app.
+- **Cart:** View all items added to your cart, adjust quantities, remove items, and see the running total. Cart state is persistent across reloads.
+- **Checkout:** Review your order summary and place a mock order. The cart is cleared after checkout, and a thank you page is shown.
+- **Single Product Page:** Click any product to view its details, including a large image, description, price (in selected currency), and an Add to Cart button.
+
 ## Design Approach
 
 - **Layout:** Clean, centered layouts with a prominent hero section, product grid, and modern product detail pages inspired by real e-commerce UIs.

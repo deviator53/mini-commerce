@@ -20,7 +20,17 @@ export default function CheckoutPage() {
   };
 
   if (items.length === 0) {
-    return <div>Your cart is empty.</div>;
+    return (
+      <div className="flex flex-col items-center gap-4">
+        <div>Your cart is empty.</div>
+        <a
+          href="/"
+          className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+        >
+          Go Back Home
+        </a>
+      </div>
+    );
   }
 
   return (
@@ -33,8 +43,8 @@ export default function CheckoutPage() {
             className="flex items-center gap-4 border-b pb-2"
           >
             <Image
-            width={64}
-            height={64}
+              width={64}
+              height={64}
               src={item.image}
               alt={item.name}
               className="w-12 h-12 object-contain"
@@ -54,12 +64,12 @@ export default function CheckoutPage() {
         <div className="text-xl font-bold">{formatCurrency(subtotal())}</div>
       </div>
       <div className="max-w-4xl mx-auto  p-2 space-y-4">
-      <button
-        className="px-6 py-3 bg-green-600 text-white rounded hover:bg-green-700"
-        onClick={handlePlaceOrder}
-      >
-        Place Order
-      </button>
+        <button
+          className="px-6 py-3 bg-green-600 text-white rounded hover:bg-green-700"
+          onClick={handlePlaceOrder}
+        >
+          Place Order
+        </button>
       </div>
     </div>
   );
