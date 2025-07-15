@@ -2,6 +2,7 @@
 import { useCartStore } from "../utils/cartStore";
 import Link from "next/link";
 import { useFormatCurrency } from "../utils/formatCurrency";
+import Image from "next/image";
 
 export default function CartPage() {
   const { items, updateQuantity, removeFromCart, subtotal, totalItems } =
@@ -10,17 +11,19 @@ export default function CartPage() {
 
   return (
     <div>
-      <h1 className="text-2xl font-bold mb-4">Your Cart</h1>
+      <h1 className="max-w-4xl mx-auto text-2xl font-bold mb-4">Your Cart</h1>
       {items.length === 0 ? (
-        <div>Your cart is empty.</div>
+        <div className="text-center">Your cart is empty.</div>
       ) : (
-        <div className="space-y-4">
+        <div className="max-w-4xl mx-auto shadow-lg p-2 space-y-4">
           {items.map((item) => (
             <div
               key={item.slug}
               className="flex items-center gap-4 border-b pb-2"
             >
-              <img
+              <Image
+                width={64}
+                height={64}
                 src={item.image}
                 alt={item.name}
                 className="w-16 h-16 object-contain"

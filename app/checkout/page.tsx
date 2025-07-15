@@ -2,6 +2,7 @@
 import { useCartStore } from "../utils/cartStore";
 import { useRouter } from "next/navigation";
 import { useFormatCurrency } from "../utils/formatCurrency";
+import Image from "next/image";
 
 function randomOrderId() {
   return Math.random().toString(36).substring(2, 10).toUpperCase();
@@ -24,14 +25,16 @@ export default function CheckoutPage() {
 
   return (
     <div>
-      <h1 className="text-2xl font-bold mb-4">Checkout</h1>
-      <div className="space-y-4 mb-6">
+      <h1 className="max-w-4xl mx-auto text-2xl font-bold mb-4">Checkout</h1>
+      <div className="max-w-4xl mx-auto shadow-lg p-2 space-y-4">
         {items.map((item) => (
           <div
             key={item.slug}
             className="flex items-center gap-4 border-b pb-2"
           >
-            <img
+            <Image
+            width={64}
+            height={64}
               src={item.image}
               alt={item.name}
               className="w-12 h-12 object-contain"
@@ -46,16 +49,18 @@ export default function CheckoutPage() {
           </div>
         ))}
       </div>
-      <div className="flex justify-between items-center mb-6">
+      <div className="max-w-4xl mx-auto  p-2 space-y-4 flex justify-between items-center mb-6">
         <div className="text-lg font-bold">Total:</div>
         <div className="text-xl font-bold">{formatCurrency(subtotal())}</div>
       </div>
+      <div className="max-w-4xl mx-auto  p-2 space-y-4">
       <button
-        className="w-full px-6 py-3 bg-green-600 text-white rounded hover:bg-green-700"
+        className="px-6 py-3 bg-green-600 text-white rounded hover:bg-green-700"
         onClick={handlePlaceOrder}
       >
         Place Order
       </button>
+      </div>
     </div>
   );
 }
