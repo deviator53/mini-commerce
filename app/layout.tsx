@@ -4,8 +4,8 @@ import "./globals.css";
 import { Providers } from "./providers";
 import Link from "next/link";
 import { useCartStore } from "./utils/cartStore";
-import { useEffect, useState } from "react";
 import CartItems from "./components/CartItems";
+import CurrencySelector from "./components/CurrencySelector";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -28,7 +28,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-
+  
   return (
     <html lang="en">
       <body
@@ -39,7 +39,10 @@ export default function RootLayout({
             <Link href="/" className="text-xl font-bold">
               Mini-Commerce
             </Link>
-            <CartItems />
+            <div className="flex items-center gap-6">
+              <CurrencySelector />
+              <CartItems />
+            </div>
           </header>
           <main className="w-full mx-auto px-4">{children}</main>
           <footer className="w-full mt-12 py-6 bg-gray-50 border-t text-center text-gray-600 text-sm">
@@ -49,13 +52,16 @@ export default function RootLayout({
               </div>
               <div className="flex gap-4 items-center">
                 <span className="hidden sm:inline">|</span>
-                <span className="italic">Tiny shop, big value.</span>
-                <span className="hidden sm:inline">|</span>
-                <a href="/about" className="hover:underline">
+                <a
+                  href="https://david-bradford.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:underline"
+                >
                   About
                 </a>
                 <a
-                  href="https://github.com/"
+                  href="https://github.com/deviator53"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:underline"

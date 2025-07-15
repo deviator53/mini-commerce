@@ -4,6 +4,8 @@ import { useQuery } from "@tanstack/react-query";
 import { seedProducts, getProducts, Product } from "./utils/products";
 import Link from "next/link";
 import { useCartStore } from "./utils/cartStore";
+import { useFormatCurrency } from "./utils/formatCurrency";
+import Image from "next/image";
 
 export default function CataloguePage() {
   useEffect(() => {
@@ -23,6 +25,7 @@ export default function CataloguePage() {
   const addToCart = useCartStore((s) => s.addToCart);
   const cartItems = useCartStore((s) => s.items);
   const [added, setAdded] = useState<string | null>(null);
+  const formatCurrency = useFormatCurrency();
 
   const getProductQty = (slug: string) => {
     const item = cartItems.find((i) => i.slug === slug);
@@ -31,7 +34,7 @@ export default function CataloguePage() {
 
   return (
     <>
-      <section className="mb-10 text-center py-10 bg-gradient-to-br from-blue-100 to-white rounded-xl shadow">
+      <section className="mb-10 text-center py-10 bg-gradient-to-br from-blue-50 to-white rounded-xl shadow">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl sm:text-5xl font-extrabold mb-4 text-blue-700">
             Welcome to Mini-Commerce
@@ -62,18 +65,21 @@ export default function CataloguePage() {
             key={product.id}
             className="border rounded-lg p-4 flex flex-col items-center bg-white shadow hover:shadow-lg transition"
           >
-            <img
+            <Image
               src={product.image}
               alt={product.name}
+              width={128}
+              height={128}
               className="w-32 h-32 object-contain mb-2"
               loading="lazy"
             />
             <h2 className="font-semibold text-lg mb-1">{product.name}</h2>
-            <p className="text-gray-600 mb-2">${product.price.toFixed(2)}</p>
+            <p className="text-gray-600 mb-2">
+              {formatCurrency(product.price)}
+            </p>
             <div className="flex gap-2 w-full">
               <button
-                className="flex justify-center px-3 py-2 border border-gray-200 rounded hover:bg-gray-200 transition"
-                title="Add to Cart"
+                className="flex-1 px-3 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
                 onClick={() => {
                   addToCart(product, 1);
                   setAdded(product.slug);
